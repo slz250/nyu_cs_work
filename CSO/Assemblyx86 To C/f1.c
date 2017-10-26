@@ -1,0 +1,20 @@
+int f1(long x, long y) {
+	int a, b, c;
+
+	if (x <= y || y <= 4) {
+		if (x <= y) {
+			x >>= 1; // x / 2
+			y <<= 2; // y * 4
+			return x + y;
+		}
+
+		//test by keeping x > y and y <= 4
+		a = y * x; 
+		b = x - y;
+		c = a + b;
+		return c;
+	} 
+
+	//test by x > y and  y > 4
+	return x <<= 5;
+}
